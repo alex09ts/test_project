@@ -32,13 +32,8 @@ public class TestProjectApplication {
 			users1.setPhone("4321");
 			userService.createUsers(users1);
 			System.out.println();
-			userService.findAll().forEach(it -> System.out.println(it));
-			System.out.println();
-			userService.findAllByName("Smith").forEach(it -> System.out.println(it));
-			System.out.println();
-			userService.findWhereEmailIsGmail().forEach(it -> System.out.println(it));
-			System.out.println();
-			userService.findWhereNameStartsFromSmith().forEach(it -> System.out.println(it));
-			System.out.println();
+			for(int i = 0; i<userService.findAll().size(); i++){
+				System.out.println(userService.findAll().get(i));
+			}
 		}
 	}
